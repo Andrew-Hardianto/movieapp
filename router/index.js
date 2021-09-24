@@ -12,13 +12,13 @@ const Stack = createStackNavigator();
 const Router = () => {
     return (
         <Stack.Navigator>
-            <Stack.Screen component={Login} name="Login" options={{
+            <Stack.Screen component={Register} name="Register" options={{
                 headerStyle: {
                     backgroundColor: '#15141F',
                 },
                 headerTintColor: 'white'
             }} />
-            <Stack.Screen component={Register} name="Register" options={{
+            <Stack.Screen component={Login} name="Login" options={{
                 headerStyle: {
                     backgroundColor: '#15141F',
                 },

@@ -8,13 +8,13 @@ const Register = ({ navigation }) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const { userInfo } = useSelector(state => state.userLogin)
+    const { userInfo, error } = useSelector(state => state.userLogin)
     const { success } = useSelector(state => state.userRegister)
 
     const dispatch = useDispatch()
 
     useEffect(() => {
-        if (userInfo !== undefined) {
+        if (userInfo) {
             navigation.navigate('Home')
         }
         if (success) {
@@ -40,7 +40,7 @@ const Register = ({ navigation }) => {
                     color: '#E9E9EA',
                     fontFamily: 'Roboto_400Regular'
                 }}
-            >LOGIN HERE</Text>
+            >REGISTER MEMBER</Text>
             <TextInput
                 style={styles.input}
                 placeholder="Email"
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     },
     input: {
         borderWidth: 0,
-        backgroundColor: '#211F30',
+        backgroundColor: '#2F2E38',
         paddingHorizontal: 10,
         paddingVertical: 10,
         width: 300,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     registerButton: {
-        width: "20%",
+        width: "30%",
         borderRadius: 25,
         height: 40,
         alignItems: "center",
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         marginTop: 30
     },
     loginBtn: {
-        width: "20%",
+        width: "30%",
         borderRadius: 25,
         height: 40,
         alignItems: "center",

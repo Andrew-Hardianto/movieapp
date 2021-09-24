@@ -13,7 +13,7 @@ const Login = ({ navigation }) => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        if (userInfo !== undefined) {
+        if (userInfo) {
             navigation.navigate('Home')
         }
         if (error) {
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     },
     input: {
         borderWidth: 0,
-        backgroundColor: '#211F30',
+        backgroundColor: '#2F2E38',
         paddingHorizontal: 10,
         paddingVertical: 10,
         width: 300,
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     registerButton: {
-        width: "20%",
+        width: "30%",
         borderRadius: 25,
         height: 40,
         alignItems: "center",
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
         marginTop: 30
     },
     loginBtn: {
-        width: "20%",
+        width: "30%",
         borderRadius: 25,
         height: 40,
         alignItems: "center",
